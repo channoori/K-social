@@ -1,3 +1,16 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* 페이스북 추가 
+지원하는 Method
+- 로그인
+- accessToken 가져오기
+- 유저 정보 가져오기
+- 로그아웃
+
+## 0.0.2
+
+* 오류 수정
+
+## 0.0.3
+
+* 오류 수정
