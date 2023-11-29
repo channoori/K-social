@@ -20,7 +20,8 @@ dev_dependencies:
 flutter:
   plugin:
     platforms:
-    
-      some_platform:
-        pluginClass: somePluginClass
-    
+      android:
+        package: com.channoori.k_social
+        pluginClass: KSocialPlugin
+      ios:
+        pluginClass: KSocialPlugin
