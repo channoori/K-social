@@ -1,0 +1,27 @@
+name: k_social
+description: 빡쳐서 만든 한국 소셜 플러그인
+version: 0.0.3
+homepage:
+
+environment:
+  sdk: '>=3.1.4 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.channoori.k_social
+        pluginClass: KSocialPlugin
+      ios:
+        pluginClass: KSocialPlugin
