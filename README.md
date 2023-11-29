@@ -1,18 +1,14 @@
-# k_social
+# korea_social_login
 
-A new Flutter plugin project.
+Flutter Plugin Social Login
+Easily add Social Login feature in your application. User profile information included.
 
-## Getting Started
+# SDK version
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Facebook
+- iOS - 16.2.1 ([CocoaPods](https://cocoapods.org/pods/FBSDKCoreKit))
+- Android - 16.2.0 ([Maven](https://mvnrepository.com/artifact/com.facebook.android/facebook-login/16.2.0))
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+### Minimum OS Version
+- iOS - 13.0
+- Android - 26(Android 8.0)
