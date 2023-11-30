@@ -3,6 +3,7 @@ import FBSDKCoreKit
 import UIKit
 
 public class KSocialPlugin: NSObject, FlutterPlugin {
+    let facebookLogin = FacebookLogin()
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "k_social", binaryMessenger: registrar.messenger())
     let instance = KSocialPlugin()
@@ -10,11 +11,11 @@ public class KSocialPlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-        if call.method.contains("facebook") {
+    if call.method.contains("facebook") {
             facebookLogin.handle(call, result: result)
         }
-    }
-    
+  }
+
     public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [AnyHashable : Any] = [:]) -> Bool {
         var options = [UIApplication.LaunchOptionsKey : Any]()
         for (k, value) in launchOptions {
@@ -36,3 +37,4 @@ public class KSocialPlugin: NSObject, FlutterPlugin {
         )
     }
 }
+

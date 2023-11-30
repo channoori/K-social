@@ -1,7 +1,7 @@
-# korea_social_login
-
-Flutter Plugin Social Login
-Easily add Social Login feature in your application. User profile information included.
+# k_social
+한국에서 이용하고 있는 소셜 서비스를 모아놓은 플러그인입니다.
+아직은 구축중이라 페이스북로그인만 되어 있는 상황입니다.
+차근차근 추가해 놓겠습니다!
 
 # SDK version
 
