@@ -1,6 +1,6 @@
 name: k_social
 description: 빡쳐서 만든 한국 소셜 플러그인
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/channoori/k_social
 
 environment:
