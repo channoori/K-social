@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'facebook_login.dart';
+import 'core/facebook_login_state_provider.dart';
 
 void main() {
   runApp(
@@ -34,6 +34,27 @@ class _MyAppState extends State<MyApp> {
         ),
         body: const FacebookLoginPageView(),
       ),
+    );
+  }
+}
+
+// * 페이스북 관련 위젯
+class FacebookLoginPageView extends ConsumerWidget {
+  const FacebookLoginPageView({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final bool loginStatus = ref.watch(facebookLoginStateProvider);
+
+    return Center(
+      child: Column(children: [
+        ElevatedButton(
+          onPressed: () async {
+            await ref.read(facebookLoginStateProvider.notifier).login();
+          },
+          child: Text(loginStatus ? "LogOut" : "LogIn"),
+        )
+      ]),
     );
   }
 }
