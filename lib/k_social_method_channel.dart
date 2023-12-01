@@ -16,7 +16,7 @@ class MethodChannelKSocial extends KSocialPlatform {
   final methodChannel = const MethodChannel('k_social');
 
   @override
-  Future<LoginData> facebookLogin(List<String> permissions) async {
+  Future<LoginData> login(List<String> permissions) async {
     try {
       final result = await methodChannel.invokeMethod('facebook/login', {"permissions": permissions});
       final token = AccessToken.fromJson(Map<String, dynamic>.from(result));
