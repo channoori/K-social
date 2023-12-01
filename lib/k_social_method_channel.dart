@@ -40,7 +40,8 @@ class MethodChannelKSocial extends KSocialPlatform {
   }
 
   @override
-  Future<void> logout() async {
-    await methodChannel.invokeMethod('facebook/logout');
+  Future<bool> logout() async {
+    final bool result = await methodChannel.invokeMethod('facebook/logout') ?? false;
+    return result;
   }
 }

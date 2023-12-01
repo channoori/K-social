@@ -60,7 +60,7 @@ class FacebookLogin: NSObject {
             
         case "facebook/logout":
             loginManager.logOut()
-            result(nil)
+            result(true)
             
         default:
             result(FlutterMethodNotImplemented)

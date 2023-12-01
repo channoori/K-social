@@ -79,7 +79,7 @@ class FacebookLogin {
         if (preSession) {
             loginManager.logOut()
         }
-        result.success(null)
+        result.success(true)
     }
 
     private fun getAccessToken(result: MethodChannel.Result) {

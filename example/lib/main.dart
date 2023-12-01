@@ -1,9 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/facebook_login_state_provider.dart';
+import 'login_page/login_detail_page.dart';
 
 void main() {
   runApp(
@@ -48,13 +48,20 @@ class FacebookLoginPageView extends ConsumerWidget {
     final bool loginStatus = ref.watch(facebookLoginStateProvider);
 
     return Center(
-      child: Column(children: [
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+        const Text('Facebook Login'),
         ElevatedButton(
           onPressed: () async {
             final (bool, String?) result = await ref.read(facebookLoginStateProvider.notifier).login();
-            if (kDebugMode) {
-              if (result.$2 != null) {
-                print('error Message: ${result.$2 ?? ''}');
+            if (result.$1) {
+              if (context.mounted) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginDetailPage(),
+                  ),
+                );
               }
             }
           },

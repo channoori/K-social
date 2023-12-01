@@ -30,7 +30,7 @@ abstract class KSocialPlatform extends PlatformInterface {
     throw UnimplementedError('getUserInfo() has not been implemented.');
   }
 
-  Future<void> logout() {
+  Future<bool> logout() {
     throw UnimplementedError('logout() has not been implemented.');
   }
 }
