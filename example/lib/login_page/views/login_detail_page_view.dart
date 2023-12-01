@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:k_social/facebook/data/models/social_user.dart';
@@ -19,6 +20,11 @@ class _LoginDetailPageViewState extends ConsumerState<LoginDetailPageView> {
     return Center(
       child:
           Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+        CachedNetworkImage(
+          imageUrl: user.facebookUser?.profileUrl ?? '',
+          width: 100,
+          height: 100,
+        ),
         InfoRow(
           title: '이름',
           content: user.facebookUser?.name ?? 'unknown name',
