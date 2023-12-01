@@ -23,11 +23,12 @@ import java.text.SimpleDateFormat
  */
 class FacebookLogin {
 
-    private val loginManager: LoginManager = LoginManager.getInstance()
+    private val loginManager: LoginManager
     private lateinit var activity: Activity
     public val resultDelegate: FacebookLoginResultDelegate
 
     constructor() {
+        loginManager = LoginManager.getInstance()
         val callbackManager = CallbackManager.Factory.create()
         resultDelegate = FacebookLoginResultDelegate(callbackManager)
         loginManager.registerCallback(callbackManager, resultDelegate)

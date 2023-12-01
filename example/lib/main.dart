@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -50,7 +51,12 @@ class FacebookLoginPageView extends ConsumerWidget {
       child: Column(children: [
         ElevatedButton(
           onPressed: () async {
-            await ref.read(facebookLoginStateProvider.notifier).login();
+            final (bool, String?) result = await ref.read(facebookLoginStateProvider.notifier).login();
+            if (kDebugMode) {
+              if (result.$2 != null) {
+                print('error Message: ${result.$2 ?? ''}');
+              }
+            }
           },
           child: Text(loginStatus ? "LogOut" : "LogIn"),
         )

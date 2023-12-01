@@ -4,7 +4,7 @@ import 'data/models/login_data.dart';
 
 class FacebookLogin {
   Future<LoginData> login(List<String> permissions) {
-    return KSocialPlatform.instance.facebookLogin(permissions);
+    return KSocialPlatform.instance.login(permissions);
   }
 
   Future<AccessToken?> get accessToken => KSocialPlatform.instance.accessToken;

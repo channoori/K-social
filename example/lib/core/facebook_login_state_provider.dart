@@ -3,8 +3,6 @@ import 'package:k_social/facebook/data/enums/login_status.dart';
 import 'package:k_social/facebook/data/models/login_data.dart';
 import 'package:k_social/k_social.dart';
 
-import '../data/models/login_info.dart';
-
 class FacebookLoginNotifier extends StateNotifier<bool> {
   FacebookLoginNotifier(super.state);
 
