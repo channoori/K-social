@@ -8,17 +8,30 @@ PODS:
   - FBSDKLoginKit (16.0.1):
     - FBSDKCoreKit (= 16.0.1)
   - Flutter (1.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - integration_test (0.0.1):
     - Flutter
   - k_social (0.0.1):
     - FBSDKCoreKit (~> 16.0.1)
     - FBSDKLoginKit (~> 16.0.1)
     - Flutter
+    - naveridlogin-sdk-ios
+  - naveridlogin-sdk-ios (4.2.0)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - sqflite (0.0.3):
+    - Flutter
+    - FMDB (>= 2.7.5)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - integration_test (from `.symlinks/plugins/integration_test/ios`)
   - k_social (from `.symlinks/plugins/k_social/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
 
 SPEC REPOS:
   trunk:
@@ -26,6 +39,8 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
+    - FMDB
+    - naveridlogin-sdk-ios
 
 EXTERNAL SOURCES:
   Flutter:
@@ -34,6 +49,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
   k_social:
     :path: ".symlinks/plugins/k_social/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
 
 SPEC CHECKSUMS:
   FBAEMKit: daac7466b918752f020345be5c7d9787f98cfc07
@@ -41,9 +60,13 @@ SPEC CHECKSUMS:
   FBSDKCoreKit_Basics: d37280da2e65872f0e931d15f45d97ea324fec37
   FBSDKLoginKit: c47a3b90920702487b10b647c63520dc2676dad9
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   integration_test: 13825b8a9334a850581300559b8839134b124670
-  k_social: 6738a37331393712a2c9044a8ef13124b8cf4571
+  k_social: de0d33bb4ecbf67763c46eeda19d19c247a87e59
+  naveridlogin-sdk-ios: 03fa42741249ab10b804f6b2574b56b6d89045ba
+  path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
+  sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
 
-PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+PODFILE CHECKSUM: 5cf354bc90ea294b76223e175b61bee180950ea9
 
 COCOAPODS: 1.14.3

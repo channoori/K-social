@@ -9,17 +9,20 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A new Flutter plugin project.
                        DESC
-                       s.homepage         = 'http://example.com'
-                       s.license          = { :file => '../LICENSE' }
-                       s.author           = { 'Channoori' => 'chsa2584613@gmail.com' }
-                       s.source           = { :path => '.' }
-                       s.source_files = 'Classes/**/*'
-                       s.dependency 'Flutter'
+  s.homepage         = 'http://example.com'
+  s.license          = { :file => '../LICENSE' }
+  s.author           = { 'Channoori' => 'chsa2584613@gmail.com' }
+  s.source           = { :path => '.' }
+  s.source_files = 'Classes/**/*'
+  s.dependency 'Flutter'
+  
+  # Facebook
+  s.dependency 'FBSDKCoreKit', '~> 16.0.1'
+  s.dependency 'FBSDKLoginKit', '~> 16.0.1'
+  # Naver
+  s.dependency 'naveridlogin-sdk-ios'
                      
-                       s.dependency 'FBSDKCoreKit', '~> 16.0.1'
-                       s.dependency 'FBSDKLoginKit', '~> 16.0.1'
-                     
-                       s.platform = :ios, '13.0'
+  s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
